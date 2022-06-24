@@ -7,19 +7,23 @@ module.exports = class UserController {
 
     //validations
     if(!name){
-      res.status(422).json({message: 'O nome é obrigatório! '})
+      res.status(422).json({message: 'O nome é obrigatório!'})
       return
     }
     if(!email){
-      res.status(422).json({message: 'O e-mail é obrigatório! '})
+      res.status(422).json({message: 'O e-mail é obrigatório!'})
+      return
+    }
+    if(!phone){
+      res.status(422).json({message: 'O telefone é obrigatório!'})
       return
     }
     if(!password){
-      res.status(422).json({message: 'O nome é obrigatório! '})
+      res.status(422).json({message: 'A senha é obrigatório!'})
       return
     }
     if(!confirmpassword){
-      res.status(422).json({message: ' nome é obrigatório! '})
+      res.status(422).json({message: 'A confirmação da senha é obrigatório!'})
       return
     }
 
