@@ -1,8 +1,8 @@
 const User = require('../models/User')
 
 module.exports = class UserController {
-
   static async register ( req, res) {
-    res.json('Olá Adopt friend')
+    
+    const {name , email , phone , password , confirmpassword} = req.body
   }
 }
