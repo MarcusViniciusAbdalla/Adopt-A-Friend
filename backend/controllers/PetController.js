@@ -1,4 +1,10 @@
+const getToken = require("../helpers/get-token")
 const Pet = require("../models/Pet")
+
+// helpers
+
+const getToken = require("../helpers/get-token")
+const getUserByToken = require("../helpers/get-user-by-token")
 
 module.exports = class PetController {
 
@@ -28,6 +34,26 @@ module.exports = class PetController {
       res.status(422).json({message: 'A cor é obrigatória!'})
       return
     }
+
+    // get pet owner
+    const token = getToken(req)
+    const user = getUserByToken(token)
+
+    // create a pet
+    const pet = new Pet ({
+      name,
+      age,
+      weight,
+      color,
+      available,
+      images:[],
+      user: {
+        _id: user.name,
+        name:user.name,
+        image: user.image,
+        phone: user.phone,
+      },
+    })
 
   }
 
