@@ -1,4 +1,3 @@
-const getToken = require("../helpers/get-token")
 const Pet = require("../models/Pet")
 
 // helpers
@@ -37,7 +36,7 @@ module.exports = class PetController {
 
     // get pet owner
     const token = getToken(req)
-    const user = getUserByToken(token)
+    const user = await getUserByToken(token)
 
     // create a pet
     const pet = new Pet ({
@@ -54,7 +53,15 @@ module.exports = class PetController {
         phone: user.phone,
       },
     })
-
+    try {
+      const newPet = await pet.save()
+      req.status(201).json({
+        message:'Pet Cadastrado com Sucesso!',
+        newPet,
+      })
+    } catch (error) {
+      res.status(500).json({ message: error})
+    }
   }
 
 }
