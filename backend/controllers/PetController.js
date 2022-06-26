@@ -121,5 +121,9 @@ module.exports = class PetController {
     if(!pet) {
       res.status(404).json({ message: 'Pet não encontrado!'})
     }
+
+    res.status(200).json({
+      pet: pet,
+    })
   }
 }
