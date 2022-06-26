@@ -1,10 +1,12 @@
 import {Link} from 'react-router-dom'
 
+import styles from './Navbar.module.css'
+
 import Logo from '../../assets/img/Logo.png'
 
 function Navbar() {
   return (
-    <nav>
+    <nav className={styles.navbar}>
       <div>
         <img src={Logo} alt="Adopt a Friend"/>
         <h2>Adopt A Friend</h2>
