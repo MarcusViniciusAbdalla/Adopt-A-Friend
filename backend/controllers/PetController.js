@@ -162,6 +162,6 @@ module.exports = class PetController {
     const id = req.params.id
     const {name , age , weight , color , available } = req.body
     const images = req.files
-    const 
+    const updateData = {}
   }
 }
