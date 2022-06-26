@@ -150,6 +150,5 @@ module.exports = class PetController {
     if(pet.user._id.toString() !== user._id){
       res.status(422).json({ message: 'Houve um problema em processar a sua solicitação, tente novamente mais tarde!'})
     }
-
   }
 }
