@@ -33,7 +33,7 @@ module.exports = class PetController {
       res.status(422).json({message: 'A cor é obrigatória!'})
       return
     }
-    if(!images) {
+    if(images.length === 0) {
       res.status(422).json({message: 'A imagem é obrigatória!'})
       return
     }
