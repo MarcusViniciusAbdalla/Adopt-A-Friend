@@ -1,8 +1,9 @@
 function Footer() {
   return (
-    <section>
-      <h1>Footer</h1>
-    </section>
+    <footer>
+      <p><span className="bold">Adopt A Friend</span> &copy;2022
+      </p>
+    </footer>
   )
 }
 
