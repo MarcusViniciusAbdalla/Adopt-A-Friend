@@ -186,24 +186,28 @@ module.exports = class PetController {
     } else {
       updateData.name = name
     }
+
     if(!age) {
       res.status(422).json({message: 'A idade é obrigatório!'})
       return
     } else {
       updateData.age = age
     }
+
     if(!weight) {
       res.status(422).json({message: 'O peso é obrigatório!'})
       return
     } else {
       updateData.weight = weight
     }
+
     if(!color) {
       res.status(422).json({message: 'A cor é obrigatória!'})
       return
     } else {
       updateData.color = color
     }
+    
     if(images.length === 0) {
       res.status(422).json({message: 'A imagem é obrigatória!'})
       return
