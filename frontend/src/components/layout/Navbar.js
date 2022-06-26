@@ -7,7 +7,7 @@ import Logo from '../../assets/img/Logo.png'
 function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <div>
+      <div className={styles.navbar_logo}>
         <img src={Logo} alt="Adopt a Friend"/>
         <h2>Adopt A Friend</h2>
       </div>
