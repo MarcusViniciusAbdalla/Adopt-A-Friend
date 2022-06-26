@@ -277,8 +277,23 @@ module.exports = class PetController {
       res.status(404).json({ message: 'Pet não encontrado!'})
       return
     }
+    // check is logged in user registered the pet
+    //get user from token
+    const token = getToken(req)
+    const user = await getUserByToken(token)
 
-    
+    if(pet.user._id.toString() !== user._id.toString()){
+      res.status(422).json({ message: 'Houve um problema em processar a sua solicitação, tente novamente mais tarde!'})
+      return
+    }
+
+    pet.available = false
+
+    await Pet.findByIdAndUpdate(id , pet)
+
+    res.status(200).json({
+      message: 'Parabéns! O clico de adoção foi finalizado com sucesso!'
+    })
 
   }
 }
