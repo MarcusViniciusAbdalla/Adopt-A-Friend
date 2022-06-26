@@ -157,4 +157,11 @@ module.exports = class PetController {
 
     res.status(200).json({ message: 'Pet removido com sucesso!'})
   }
+
+  static async updatePet( req , res) {
+    const id = req.params.id
+    const {name , age , weight , color , available } = req.body
+    const images = req.files
+    const 
+  }
 }
