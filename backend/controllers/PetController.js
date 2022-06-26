@@ -115,5 +115,11 @@ module.exports = class PetController {
       return
     }
 
+    // check if pet exists
+    const pet = await Pet.findOne({ _id: id })
+
+    if(!pet) {
+      res.status(404).json({ message: 'Pet não encontrado!'})
+    }
   }
 }
