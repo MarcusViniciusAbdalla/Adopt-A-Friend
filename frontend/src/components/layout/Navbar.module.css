@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 1em 1.5em;
-  background-color: blueviolet;
+  background-color: #63eac6;
   color: #16479d;
 }
 
@@ -13,6 +13,6 @@
 }
 
 .navbar_logo img {
-  width: 40px;
+  width: 80px;
   margin-right: 0,8em;
 }
