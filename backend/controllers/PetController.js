@@ -179,5 +179,27 @@ module.exports = class PetController {
       res.status(422).json({ message: 'Houve um problema em processar a sua solicitação, tente novamente mais tarde!'})
       return
     }
+    // validations
+    if(!name) {
+      res.status(422).json({message: 'O nome é obrigatório!'})
+      return
+    }
+    if(!age) {
+      res.status(422).json({message: 'A idade é obrigatório!'})
+      return
+    }
+    if(!weight) {
+      res.status(422).json({message: 'O peso é obrigatório!'})
+      return
+    }
+    if(!color) {
+      res.status(422).json({message: 'A cor é obrigatória!'})
+      return
+    }
+    if(images.length === 0) {
+      res.status(422).json({message: 'A imagem é obrigatória!'})
+      return
+    }
+
   }
 }
