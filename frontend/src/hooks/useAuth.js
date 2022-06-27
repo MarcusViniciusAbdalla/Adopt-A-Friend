@@ -42,6 +42,18 @@ export default function useAuth() {
       history.push('/')
     }
 
+    function logout() {
+      const msgText = 'Logout realizado com sucesso!'
+      const msgType = 'success'
+
+      setAuthenticated(false)
+      localStorage.removeItem('token')
+      api.defaults.headers.Authorization = undefined
+      history.push('/')
+
+      setFlashMessage(msgText , msgType, logout)
+    }
+
   }
   return { authenticated ,register }
 }
