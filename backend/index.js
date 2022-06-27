@@ -13,11 +13,13 @@ app.use(cors({ credentials: true , origin: 'http://localhost:3000' }))
 app.use(express.static('public'))
 
 // Routes
-const UserRoutes = require('./routes/UserRoutes')
 const PetRoutes = require('./routes/PetRoutes')
+const UserRoutes = require('./routes/UserRoutes')
 
-app.use('/users', UserRoutes)
+
 app.use('/pets', PetRoutes)
+app.use('/users', UserRoutes)
+
 app.listen(5000)
 
 
