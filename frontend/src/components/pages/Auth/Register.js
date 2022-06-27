@@ -17,13 +17,12 @@ function Register() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    // enviar o usuário para o banco
-    console.log(user)
+    register(user)
   }
 
   return (
     <section className={styles.form_container}>
-      <h1>Register</h1>
+      <h1>Registrar</h1>
       <form onSubmit={handleSubmit}>
         <Input
           text="Nome"
