@@ -4,13 +4,13 @@ const User = require("../models/User")
 
 // get use by jwt token
 const getUserByToken = async (token) => {
-  if(!token) {
-    return res.status(401).json({ message: 'Acesso Negado!'})
-  }
+  if(!token) 
+    return res.status(401).json({ Error: 'Acesso Negado!'})
+  
 
   const decoded = jwt.verify(token , 'nossosecret')
 
-  const userId = decoded.indexOf
+  const userId = decoded.id
 
   const user = await User.findOne({ _id: userId })
 
