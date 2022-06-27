@@ -1,22 +1,22 @@
-import {Link} from 'react-router-dom'
-import { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
 
 import styles from './Navbar.module.css'
 
 import Logo from '../../assets/img/Logo.png'
 
-/* context*/
-import {Context} from '../../context/UserContext'
+/* contexts */
+import { Context } from '../../context/UserContext'
 
+/* hooks */
 
 function Navbar() {
-
-  const {authenticated, logout} = useContext(Context)
+  const { authenticated, logout } = useContext(Context)
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar_logo}>
-        <img src={Logo} alt="Adopt a Friend"/>
+        <img src={Logo} alt="Adopt A Friend" />
         <h2>Adopt A Friend</h2>
       </div>
       <ul>
