@@ -22,7 +22,7 @@ function Login() {
   return (
     <section className={styles.form_container}>
       <h1>Login</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <Input
           text="E-mail"
           type="email"
