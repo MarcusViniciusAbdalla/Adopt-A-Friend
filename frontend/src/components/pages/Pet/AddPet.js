@@ -3,7 +3,7 @@ import api from '../../../utils/api'
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-import styles from './Add.Pet.module.css'
+import styles from './AddPet.module.css'
 
 import PetForm from '../../form/PetForm'
 
