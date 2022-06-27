@@ -7,7 +7,7 @@ import Logo from '../../assets/img/Logo.png'
 
 /* context*/
 import {Context} from '../../context/UserContext'
-import { useContext } from 'react'
+
 
 function Navbar() {
 
