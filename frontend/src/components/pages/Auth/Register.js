@@ -13,6 +13,7 @@ function Register() {
   function handleSubmit(e) {
     e.preventDefault()
     // enviar o usuário para o banco
+    console.log(user)
   }
 
   return (
