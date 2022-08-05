@@ -7,6 +7,8 @@ Adopt a Friend é uma aplicação full stack web e mobile construída durante o 
 
 A aplicação consiste em uma plataforma de cadastro de usuário, onde os dados são coletados no banco de dados (MONGO DB), e depois são listados na tela de usuário logado, que também apresenta um dashboard baseados nestes dados.
 
+Foi feito todo sistema de autenticação no Login, Cadastro de Usuário através de API Rest , retornando do NODE sempre um token JWT de autenticação.
+
 ## Layout Tela de Registro
 
 <p align="center" style="border-radius:100%"><img height="auto" width="90%"  src="assets/Tela Registro.jpg" ></p>
